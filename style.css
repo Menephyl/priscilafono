@@ -1495,3 +1495,185 @@ section {
         height: 48px;
     }
 }
+
+/* Scroll Reveal */
+.reveal-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1), transform 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+.reveal-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+
+/* CRFa */
+.crfa-text {
+    font-size: 0.8rem;
+    font-weight: normal;
+    display: block;
+    color: var(--text-light);
+}
+
+/* Hero Slider & Sobre Slider */
+.hero-bg-image, .sobre-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    object-fit: cover;
+}
+.hero-bg-image.active, .sobre-img.active {
+    opacity: 1;
+}
+.sobre-image-container {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    height: 460px;
+    box-shadow: var(--shadow-hover);
+}
+
+/* Escritório */
+.escritorio {
+    background: var(--bg-alt);
+}
+.escritorio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.escritorio-img-wrapper {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+.escritorio-img-wrapper img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.escritorio-img-wrapper:hover img {
+    transform: scale(1.05);
+}
+.badge-domicilio {
+    display: inline-block;
+    background: var(--primary);
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Carousel Global (Atuação & Depoimentos) */
+.carousel-container, .depoimentos-slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+}
+.carousel-track, .depoimentos-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: scrollCarousel 25s linear infinite;
+}
+.carousel-track:hover, .depoimentos-track:hover {
+    animation-play-state: paused;
+}
+@keyframes scrollCarousel {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 10px)); }
+}
+
+.carousel-slide {
+    width: 320px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--card);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(125, 91, 166, 0.08);
+}
+.carousel-slide img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.slide-content {
+    padding: 20px;
+    text-align: center;
+}
+.slide-content h3 { font-size: 1.1rem; margin-bottom: 10px; color: var(--text); }
+.slide-content p { font-size: 0.9rem; margin: 0; color: var(--text-light); }
+
+.depoimento-card {
+    width: 350px;
+    white-space: normal;
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 28px;
+    border: 1px solid rgba(125, 91, 166, 0.08);
+    box-shadow: var(--shadow);
+}
+
+/* Instagram */
+.instagram-section {
+    background: var(--bg);
+}
+.insta-post {
+    max-width: 400px;
+    margin: 0 auto;
+    background: var(--card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(125, 91, 166, 0.08);
+}
+.insta-img-wrapper img {
+    width: 100%;
+    height: auto;
+}
+.insta-actions {
+    padding: 15px;
+    text-align: center;
+}
+.btn-like {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ffeded;
+    color: #e1306c;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 1px solid #ffc2d1;
+    transition: all 0.3s ease;
+}
+.btn-like:hover {
+    background: #e1306c;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Pulsing */
+.palpitando, .pulse-btn {
+    animation: pulseHeart 1.5s infinite;
+}
+@keyframes pulseHeart {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(125, 91, 166, 0.7); }
+    50% { transform: scale(1.08); box-shadow: 0 0 0 15px rgba(125, 91, 166, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(125, 91, 166, 0); }
+}
+
+@media (max-width: 768px) {
+    .escritorio-grid {
+        grid-template-columns: 1fr;
+    }
+}

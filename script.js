@@ -80,42 +80,50 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Animações de entrada
-    const animatedElements = document.querySelectorAll(
-        '.servico-card, .plano-card, .antes-depois-card, .beneficio-card, .depoimento-card, .faq-item, .feature, .stat, .sobre-image, .contato-info'
-    );
-
-    const observer = new IntersectionObserver((entries) => {
+    // Scroll Reveal
+    const revealElements = document.querySelectorAll('.reveal-item');
+    const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('in-view');
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('active');
             }
         });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.1 });
 
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
+    revealElements.forEach(el => {
+        revealObserver.observe(el);
     });
 
-    const revealInViewElements = () => {
-        document.querySelectorAll('.in-view').forEach(el => {
-            el.style.opacity = '1';
-            el.style.transform = 'translateY(0)';
-        });
-    };
-
-    document.addEventListener('scroll', revealInViewElements);
-    window.addEventListener('load', revealInViewElements);
-
     setTimeout(() => {
-        window.dispatchEvent(new Event('scroll'));
-        revealInViewElements();
+        revealElements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight) {
+                el.classList.add('active');
+            }
+        });
     }, 100);
+
+    // Hero Background Slider (1.4s)
+    const heroImages = document.querySelectorAll('#heroBgSlider .hero-bg-image');
+    if (heroImages.length > 1) {
+        let currentHeroIndex = 0;
+        setInterval(() => {
+            heroImages[currentHeroIndex].classList.remove('active');
+            currentHeroIndex = (currentHeroIndex + 1) % heroImages.length;
+            heroImages[currentHeroIndex].classList.add('active');
+        }, 1400);
+    }
+
+    // Sobre Image Slider (3s)
+    const sobreImages = document.querySelectorAll('#sobreImgSlider .sobre-img');
+    if (sobreImages.length > 1) {
+        let currentSobreIndex = 0;
+        setInterval(() => {
+            sobreImages[currentSobreIndex].classList.remove('active');
+            currentSobreIndex = (currentSobreIndex + 1) % sobreImages.length;
+            sobreImages[currentSobreIndex].classList.add('active');
+        }, 3000);
+    }
 
     // =========================
     // MODAL CHAT IA + N8N

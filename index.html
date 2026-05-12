@@ -1,12 +1,31 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Priscilla Miranda - Fonoaudióloga materno-infantil, consultora de amamentação e especialista no cuidado com bebês. Atendimento para amamentação, disfunções orais, teste da linguinha, disfagia e introdução alimentar.">
+        content="Priscilla Miranda - Fonoaudióloga materno-infantil, consultora de amamentação e especialista no cuidado com bebês. Atendimento para amamentação, disfunções orais, teste da linguinha, disfagia e introdução alimentar. CRFa 9954.">
+
+    <!-- Open Graph / Meta tags -->
+    <meta property="og:title" content="Priscilla Miranda | Fonoaudiologia Materno-Infantil">
+    <meta property="og:description"
+        content="Especialista no cuidado com bebês. Amamentação, disfunções orais, teste da linguinha, disfagia e introdução alimentar. CRFa 9954.">
+    <meta property="og:image" content="./assets/fono-primiranda.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22 font-family=%22sans-serif%22 font-weight=%22bold%22 fill=%22%237d5ba6%22>P</text></svg>">
+
     <title>Priscilla Miranda | Fono de Bebês</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts for better typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -14,7 +33,10 @@
     <header class="header" id="header" style="box-shadow: rgba(125, 91, 166, 0.08) 0px 4px 20px;">
         <div class="container">
             <nav class="nav">
-                <a href="#inicio" class="logo">Priscilla Miranda</a>
+                <a href="#inicio" class="logo">
+                    Priscilla Miranda
+                    <span class="crfa-text">CRFa 9954</span>
+                </a>
 
                 <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
                     <span></span><span></span><span></span>
@@ -24,10 +46,9 @@
                     <li><a href="#inicio">Início</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#consultoria">Atendimento</a></li>
+                    <li><a href="#escritorio">Escritório</a></li>
                     <li><a href="#resultados">Atuação</a></li>
                     <li><a href="#depoimentos">Depoimentos</a></li>
-                    <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
@@ -36,41 +57,40 @@
 
     <!-- ========== HERO ========== -->
     <section class="hero" id="inicio">
-        <div class="hero-background">
-            <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=1920&amp;q=80"
-                alt="Mãe segurando bebê com carinho" class="hero-bg-image">
+        <div class="hero-background" id="heroBgSlider">
+            <img src="./assets/fono-primiranda.jpg" alt="Mãe segurando bebê com carinho" class="hero-bg-image active">
+            <img src="./assets/nossoEscritorio.jpeg" alt="Nosso Escritório" class="hero-bg-image">
+            <img src="./assets/nossoEscritorio2.jpeg" alt="Nosso Escritório Detalhe" class="hero-bg-image">
             <div class="hero-overlay"></div>
         </div>
 
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge">FONOAUDIOLOGIA MATERNO-INFANTIL</div>
-                <h1>Cuidado especializado para bebês e apoio acolhedor para famílias</h1>
-                <p class="hero-subtitle">
-                    Com o atendimento da <strong>Priscilla Miranda</strong>, você recebe orientação técnica e humana
+                <div class="hero-badge reveal-item">FONOAUDIOLOGIA MATERNO-INFANTIL</div>
+                <h1 class="reveal-item delay-1">Cuidado especializado para bebês e apoio acolhedor para famílias</h1>
+                <p class="hero-subtitle reveal-item delay-2">
+                    Com o atendimento da <strong>Priscilla Miranda (CRFa 9954)</strong>, você recebe orientação técnica
+                    e humana
                     para lidar com amamentação, disfunções orais, teste da linguinha, disfagia e introdução alimentar do
                     bebê com mais segurança e tranquilidade.
                 </p>
 
-                <div class="hero-buttons">
-                    <a href="#consultoria" class="btn btn-primary">Ver Atendimento</a>
-                    <a href="https://wa.me/555184745509" class="btn btn-secondary" target="_blank"
-                        rel="noopener noreferrer">Agendar pelo WhatsApp</a>
+                <div class="hero-buttons reveal-item delay-3">
+                    <a href="https://wa.me/555184745509" class="btn btn-primary" target="_blank"
+                        rel="noopener noreferrer">Contrate Agora</a>
+                    <a href="#consultoria" class="btn btn-secondary">Ver Atendimento</a>
                 </div>
 
-                <div class="hero-stats">
-                    <div class="stat in-view"
-                        style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                <div class="hero-stats reveal-item delay-4">
+                    <div class="stat">
                         <span class="stat-number">Desde 2015</span>
                         <span class="stat-label">Consultora de amamentação</span>
                     </div>
-                    <div class="stat in-view"
-                        style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                        <span class="stat-number">5</span>
-                        <span class="stat-label">Áreas principais de atendimento</span>
+                    <div class="stat">
+                        <span class="stat-number">CRFa</span>
+                        <span class="stat-label">9954</span>
                     </div>
-                    <div class="stat in-view"
-                        style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                    <div class="stat">
                         <span class="stat-number">Humanizado</span>
                         <span class="stat-label">Cuidado individualizado</span>
                     </div>
@@ -82,21 +102,22 @@
     <!-- ========== SOBRE ========== -->
     <section class="sobre" id="sobre">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal-item">
                 <h2>Sobre Priscilla Miranda</h2>
                 <p>Técnica, empatia e cuidado nos primeiros desafios da vida do bebê</p>
             </div>
 
             <div class="sobre-content">
-                <div class="sobre-image in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <img src="./assets/fono-primiranda.jpg" alt="Priscilla Miranda" class="sobre-img">
+                <div class="sobre-image-container reveal-item" id="sobreImgSlider">
+                    <img src="./assets/fono-primiranda.jpg" alt="Priscilla Miranda" class="sobre-img active">
+                    <img src="./assets/fono-primiranda-2.jpg" alt="Priscilla Miranda" class="sobre-img">
                 </div>
 
                 <div class="sobre-text-content">
-                    <div class="sobre-text">
+                    <div class="sobre-text reveal-item delay-1">
                         <p>
-                            <strong>Priscilla Miranda</strong> é consultora de amamentação desde 2015, especialista em
+                            <strong>Priscilla Miranda (CRFa 9954)</strong> é consultora de amamentação desde 2015,
+                            especialista em
                             saúde materno-infantil, fonoaudióloga pela UFRGS (2025), especialista em saúde da criança e
                             mestre em saúde da criança.
                         </p>
@@ -108,8 +129,7 @@
                     </div>
 
                     <div class="sobre-features">
-                        <div class="feature in-view"
-                            style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                        <div class="feature reveal-item delay-2">
                             <div class="feature-icon">🤱</div>
                             <div>
                                 <h3>Apoio na Amamentação</h3>
@@ -118,22 +138,12 @@
                             </div>
                         </div>
 
-                        <div class="feature in-view"
-                            style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                        <div class="feature reveal-item delay-3">
                             <div class="feature-icon">👶</div>
                             <div>
                                 <h3>Cuidado com o Bebê</h3>
                                 <p>Atendimento voltado às necessidades orais e alimentares do bebê nos primeiros meses
                                     de vida.</p>
-                            </div>
-                        </div>
-
-                        <div class="feature in-view"
-                            style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                            <div class="feature-icon">💜</div>
-                            <div>
-                                <h3>Atendimento Humanizado</h3>
-                                <p>Escuta, acolhimento e orientação individualizada para cada bebê e cada família.</p>
                             </div>
                         </div>
                     </div>
@@ -145,218 +155,157 @@
     <!-- ========== SERVIÇOS ========== -->
     <section class="servicos" id="servicos">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal-item">
                 <h2>Serviços</h2>
                 <p>Atendimento especializado para os primeiros cuidados com a alimentação e o desenvolvimento oral do
                     bebê</p>
             </div>
 
             <div class="servicos-grid">
-                <div class="servico-card in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                <div class="servico-card reveal-item">
                     <div class="servico-image">
-                        <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=600&amp;q=80"
-                            alt="Amamentação">
+                        <img src="./assets/pezinho.jpeg" alt="Amamentação e Cuidados Iniciais">
                     </div>
                     <div class="servico-content">
                         <h3>Amamentação</h3>
                         <p>Suporte para dificuldades na pega, dor, posicionamento, sucção e rotina de amamentação do
                             bebê.</p>
-                        <span class="preco">Atendimento especializado</span>
+                        <a href="https://wa.me/555184745509" class="btn btn-primary btn-sm" target="_blank"
+                            style="margin-top: 15px;">Agende Agora</a>
                     </div>
                 </div>
 
-                <div class="servico-card in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                <div class="servico-card reveal-item delay-1">
                     <div class="servico-image">
-                        <img src="https://images.unsplash.com/photo-1544126592-807ade215a0b?w=600&amp;q=80"
-                            alt="Disfunções orais">
+                        <img src="./assets/objeto.jpeg" alt="Disfunções Orais e Materiais de Apoio">
                     </div>
                     <div class="servico-content">
                         <h3>Disfunções Orais</h3>
                         <p>Avaliação de alterações que podem impactar sucção, alimentação e conforto do bebê.</p>
-                        <span class="preco">Avaliação cuidadosa</span>
+                        <a href="https://wa.me/555184745509" class="btn btn-primary btn-sm" target="_blank"
+                            style="margin-top: 15px;">Agende Agora</a>
                     </div>
                 </div>
 
-                <div class="servico-card in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                <div class="servico-card reveal-item delay-2">
                     <div class="servico-image">
-                        <img src="https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?w=600&amp;q=80"
+                        <img src="https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?w=600&q=80"
                             alt="Teste da linguinha">
                     </div>
                     <div class="servico-content">
                         <h3>Teste da Linguinha</h3>
                         <p>Triagem e avaliação para identificar possíveis alterações no frênulo lingual do bebê.</p>
-                        <span class="preco">Triagem e orientação</span>
-                    </div>
-                </div>
-
-                <div class="servico-card in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <div class="servico-image">
-                        <img src="https://images.unsplash.com/photo-1504439468489-c8920d796a29?w=600&amp;q=80"
-                            alt="Disfagia em bebês">
-                    </div>
-                    <div class="servico-content">
-                        <h3>Disfagia</h3>
-                        <p>Acompanhamento de dificuldades de deglutição com foco em segurança alimentar e bem-estar.</p>
-                        <span class="preco">Cuidado e segurança</span>
-                    </div>
-                </div>
-
-                <div class="servico-card in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <div class="servico-image">
-                        <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=600&amp;q=80"
-                            alt="Introdução alimentar">
-                    </div>
-                    <div class="servico-content">
-                        <h3>Introdução Alimentar</h3>
-                        <p>Orientação para a introdução alimentar de bebês até 1 ano, respeitando cada fase do
-                            desenvolvimento.</p>
-                        <span class="preco">Até 1 ano de idade</span>
+                        <a href="https://wa.me/555184745509" class="btn btn-primary btn-sm" target="_blank"
+                            style="margin-top: 15px;">Agende Agora</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ========== COMO FUNCIONA / ATENDIMENTO ========== -->
-    <section class="consultoria" id="consultoria">
-        <div class="container">
-            <div class="section-header">
-                <h2>Como funciona o atendimento</h2>
-                <p>Um cuidado pensado para acolher a família e atender o bebê com segurança</p>
-            </div>
 
-            <div class="planos-grid">
-                <div class="plano-card destaque-plano in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <div class="plano-topo">
-                        <span class="plano-tag">Passo 1</span>
-                        <h3>Escuta e acolhimento</h3>
-                        <p>Entendimento da rotina e da necessidade da família</p>
-                    </div>
-                    <div class="plano-preco">
-                        <strong>01</strong>
-                        <span>primeiro contato</span>
-                    </div>
-                    <ul class="plano-lista">
-                        <li>Escuta da queixa principal</li>
-                        <li>Entendimento do momento do bebê</li>
-                        <li>Direcionamento inicial com cuidado</li>
-                    </ul>
-                    <a href="https://wa.me/555184745509" target="_blank" rel="noopener noreferrer"
-                        class="btn btn-primary btn-full">Falar no WhatsApp</a>
-                </div>
-
-                <div class="plano-card in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <div class="plano-topo">
-                        <h3>Avaliação individualizada</h3>
-                        <p>Análise técnica e humanizada</p>
-                    </div>
-                    <div class="plano-preco">
-                        <strong>02</strong>
-                        <span>avaliação</span>
-                    </div>
-                    <ul class="plano-lista">
-                        <li>Observação da alimentação</li>
-                        <li>Avaliação oral e funcional</li>
-                        <li>Conduta pensada para cada caso</li>
-                    </ul>
-                    <a href="https://wa.me/555184745509" target="_blank" rel="noopener noreferrer"
-                        class="btn btn-primary btn-full">Agendar Avaliação</a>
-                </div>
-
-                <div class="plano-card in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <div class="plano-topo">
-                        <h3>Orientação para a família</h3>
-                        <p>Mais clareza e segurança no processo</p>
-                    </div>
-                    <div class="plano-preco">
-                        <strong>03</strong>
-                        <span>orientação</span>
-                    </div>
-                    <ul class="plano-lista">
-                        <li>Explicação prática e objetiva</li>
-                        <li>Ajustes conforme a necessidade</li>
-                        <li>Condutas com acolhimento</li>
-                    </ul>
-                    <a href="https://wa.me/555184745509" target="_blank" rel="noopener noreferrer"
-                        class="btn btn-primary btn-full">Solicitar Atendimento</a>
-                </div>
-
-                <div class="plano-card in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <div class="plano-topo">
-                        <h3>Acompanhamento</h3>
-                        <p>Seguimento do cuidado quando necessário</p>
-                    </div>
-                    <div class="plano-preco">
-                        <strong>04</strong>
-                        <span>continuidade</span>
-                    </div>
-                    <ul class="plano-lista">
-                        <li>Monitoramento da evolução</li>
-                        <li>Suporte às novas fases</li>
-                        <li>Família mais segura no processo</li>
-                    </ul>
-                    <a href="https://wa.me/555184745509" target="_blank" rel="noopener noreferrer"
-                        class="btn btn-primary btn-full">Continuar Atendimento</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== ÁREAS DE ATUAÇÃO ========== -->
+    <!-- ========== ÁREAS DE ATUAÇÃO (CARROSSEL) ========== -->
     <section class="destaques" id="resultados">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal-item">
                 <h2>Áreas de atuação</h2>
                 <p>Cuidado especializado nos primeiros desafios da alimentação e do desenvolvimento do bebê</p>
             </div>
 
-            <div class="antes-depois-grid">
-                <div class="antes-depois-card in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <div class="antes-depois-imagens">
-                        <div class="imagem-box imagem-box-unica">
-                            <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&amp;q=80"
-                                alt="Bebê com a mãe" class="antes-depois-img">
+            <div class="carousel-container reveal-item">
+                <div class="carousel-track" id="atuacaoCarousel">
+                    <div class="carousel-slide">
+                        <img src="./assets/pezinho.jpeg" alt="Cuidado Neonatal">
+                        <div class="slide-content">
+                            <h3>Acompanhamento Neonatal</h3>
+                            <p>Cuidado humanizado e suporte nas primeiras semanas de vida.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./assets/objeto.jpeg" alt="Estímulos Orais">
+                        <div class="slide-content">
+                            <h3>Estímulos Sensoriais e Orais</h3>
+                            <p>Utilização de materiais adequados para avaliação e estímulo do bebê.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./assets/nossoEscritorio2.jpeg" alt="Acolhimento">
+                        <div class="slide-content">
+                            <h3>Acolhimento Familiar</h3>
+                            <p>Orientação focada na segurança e bem-estar de toda a família.</p>
+                        </div>
+                    </div>
+                    <!-- Duplicate for loop -->
+                    <div class="carousel-slide">
+                        <img src="./assets/pezinho.jpeg" alt="Cuidado Neonatal">
+                        <div class="slide-content">
+                            <h3>Acompanhamento Neonatal</h3>
+                            <p>Cuidado humanizado e suporte nas primeiras semanas de vida.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./assets/objeto.jpeg" alt="Estímulos Orais">
+                        <div class="slide-content">
+                            <h3>Estímulos Sensoriais e Orais</h3>
+                            <p>Utilização de materiais adequados para avaliação e estímulo do bebê.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./assets/nossoEscritorio2.jpeg" alt="Acolhimento">
+                        <div class="slide-content">
+                            <h3>Acolhimento Familiar</h3>
+                            <p>Orientação focada na segurança e bem-estar de toda a família.</p>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="antes-depois-card in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <div class="antes-depois-imagens">
-                        <div class="imagem-box imagem-box-unica">
-                            <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=800&amp;q=80"
-                                alt="Amamentação com acolhimento" class="antes-depois-img">
-                        </div>
-                    </div>
+    <!-- ========== NOSSO ESCRITÓRIO ========== -->
+    <section class="escritorio" id="escritorio">
+        <div class="container">
+            <div class="section-header reveal-item">
+                <h2>Nosso Escritório</h2>
+                <p>Um ambiente acolhedor, limpo e pensado com muito carinho para receber você e seu bebê com toda
+                    segurança e conforto.</p>
+                <div class="badge-domicilio">🏠 Atendemos também a domicílio!</div>
+            </div>
+
+            <div class="escritorio-grid">
+                <div class="escritorio-img-wrapper reveal-item">
+                    <img src="./assets/nossoEscritorio.jpeg" alt="Nosso Escritório - Sala de Atendimento">
                 </div>
-
-                <div class="antes-depois-card in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <div class="antes-depois-imagens">
-                        <div class="imagem-box imagem-box-unica">
-                            <img src="https://images.unsplash.com/photo-1544126592-807ade215a0b?w=800&amp;q=80"
-                                alt="Cuidados com o bebê" class="antes-depois-img">
-                        </div>
-                    </div>
+                <div class="escritorio-img-wrapper reveal-item delay-1">
+                    <img src="./assets/nossoEscritorio2.jpeg" alt="Nosso Escritório - Detalhes do Ambiente">
                 </div>
+            </div>
 
-                <div class="antes-depois-card in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <div class="antes-depois-imagens">
-                        <div class="imagem-box imagem-box-unica">
-                            <img src="https://images.unsplash.com/photo-1504439468489-c8920d796a29?w=800&amp;q=80"
-                                alt="Acompanhamento infantil" class="antes-depois-img">
-                        </div>
+            <div class="escritorio-cta reveal-item delay-2" style="text-align: center; margin-top: 40px;">
+                <a href="https://wa.me/555184745509" class="btn btn-primary btn-lg" target="_blank"
+                    rel="noopener noreferrer">Contrate Agora o Atendimento</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== INSTAGRAM CAROUSEL ========== -->
+    <section class="instagram-section">
+        <div class="container">
+            <div class="section-header reveal-item">
+                <h2>Acompanhe no Instagram</h2>
+                <p>Informação, dicas e dia a dia dos atendimentos</p>
+            </div>
+
+            <div class="insta-carousel-container reveal-item">
+                <div class="insta-post">
+                    <div class="insta-img-wrapper">
+                        <img src="./assets/comopossoajudar.jpeg" alt="Como posso ajudar com seu bebê?">
+                    </div>
+                    <div class="insta-actions">
+                        <a href="https://www.instagram.com/p/DXwlxyXEbZJ/?img_index=4" target="_blank"
+                            rel="noopener noreferrer" class="btn-like">
+                            ❤️ Curtir no Instagram
+                        </a>
                     </div>
                 </div>
             </div>
@@ -366,38 +315,28 @@
     <!-- ========== BENEFÍCIOS ========== -->
     <section class="beneficios">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal-item">
                 <h2>Por que escolher Priscilla Miranda?</h2>
                 <p>Um atendimento que une conhecimento técnico, acolhimento e foco no bem-estar do bebê e da família</p>
             </div>
 
             <div class="beneficios-grid">
-                <div class="beneficio-card in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                <div class="beneficio-card reveal-item">
                     <div class="beneficio-icon">💜</div>
                     <h3>Atendimento humanizado</h3>
                     <p>Escuta sensível, acolhimento e respeito à realidade de cada família.</p>
                 </div>
 
-                <div class="beneficio-card in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                <div class="beneficio-card reveal-item delay-1">
                     <div class="beneficio-icon">🍼</div>
                     <h3>Foco na alimentação do bebê</h3>
                     <p>Cuidado com sucção, deglutição, amamentação e introdução alimentar.</p>
                 </div>
 
-                <div class="beneficio-card in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                <div class="beneficio-card reveal-item delay-2">
                     <div class="beneficio-icon">🎓</div>
                     <h3>Formação especializada</h3>
                     <p>Atuação embasada em estudo, atualização constante e experiência na área materno-infantil.</p>
-                </div>
-
-                <div class="beneficio-card in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <div class="beneficio-icon">👩‍🍼</div>
-                    <h3>Apoio para a família</h3>
-                    <p>Mais orientação, mais segurança e mais tranquilidade nos primeiros desafios com o bebê.</p>
                 </div>
             </div>
         </div>
@@ -406,113 +345,130 @@
     <!-- ========== DEPOIMENTOS ========== -->
     <section class="depoimentos" id="depoimentos">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal-item">
                 <h2>Depoimentos</h2>
                 <p>Famílias acolhidas se sentem mais seguras em cada etapa do cuidado</p>
             </div>
 
-            <div class="depoimentos-grid">
-                <div class="depoimento-card in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <div class="depoimento-header">
-                        <div class="avatar">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&amp;q=80"
-                                alt="Mãe atendida">
+            <div class="depoimentos-slider reveal-item">
+                <div class="depoimentos-track" id="depoimentosTrack">
+                    <!-- Depoimento 1 -->
+                    <div class="depoimento-card">
+                        <div class="depoimento-header">
+                            <div class="avatar">
+                                <img src="./assets/andreza.png" alt="Andreza da Rocha"
+                                    onerror="this.src='https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80'">
+                            </div>
+                            <div class="depoimento-info">
+                                <h4>Andreza da Rocha</h4>
+                                <span>Atendimento em Amamentação</span>
+                            </div>
                         </div>
-                        <div class="depoimento-info">
-                            <h4>Mariana</h4>
-                            <span>Atendimento em amamentação</span>
-                        </div>
+                        <p>"A Dra. Priscilla é uma excelente profissional, além de muito atenciosa e paciente com o
+                            bebê. Nos auxiliou a liberar as tensões para que o meu filho pudesse mamar de forma mais
+                            efetiva. Recomendo muito!"</p>
+                        <div class="depoimento-stars">⭐⭐⭐⭐⭐</div>
                     </div>
-                    <p>"O atendimento da Priscilla trouxe calma em um momento que eu estava muito insegura. Me senti
-                        acolhida e mais confiante para seguir amamentando."</p>
-                    <div class="depoimento-stars">⭐⭐⭐⭐⭐</div>
-                </div>
 
-                <div class="depoimento-card in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <div class="depoimento-header">
-                        <div class="avatar">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&amp;q=80"
-                                alt="Responsável por bebê">
+                    <!-- Depoimento 2 -->
+                    <div class="depoimento-card">
+                        <div class="depoimento-header">
+                            <div class="avatar">
+                                <img src="./assets/renata-poliseni.png" alt="Renata Poliseni"
+                                    onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80'">
+                            </div>
+                            <div class="depoimento-info">
+                                <h4>Renata Poliseni</h4>
+                                <span>Avaliação e Acompanhamento</span>
+                            </div>
                         </div>
-                        <div class="depoimento-info">
-                            <h4>Fernanda</h4>
-                            <span>Avaliação do bebê</span>
-                        </div>
+                        <p>"Prédio acessível com elevador, de esquina. Próximo a uma praça em uma rua tranquila.
+                            Surpreendeu a decoração temática e muito delicada. A Fonoaudiologa especializada possui
+                            muita experiência com mamães e bebês na fase crítica da amamentação. Em momentos de
+                            dificuldades vale buscar profissionais especializados para a solução."</p>
+                        <div class="depoimento-stars">⭐⭐⭐⭐⭐</div>
                     </div>
-                    <p>"Foi um atendimento muito cuidadoso, explicando tudo com clareza. Saímos mais tranquilos e
-                        entendendo melhor o que nosso bebê precisava."</p>
-                    <div class="depoimento-stars">⭐⭐⭐⭐⭐</div>
-                </div>
 
-                <div class="depoimento-card in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <div class="depoimento-header">
-                        <div class="avatar">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&amp;q=80"
-                                alt="Mãe de bebê">
+                    <!-- Depoimento 3 -->
+                    <div class="depoimento-card">
+                        <div class="depoimento-header">
+                            <div class="avatar">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80"
+                                    alt="Izadora">
+                            </div>
+                            <div class="depoimento-info">
+                                <h4>Izadora</h4>
+                                <span>Atendimento Humanizado</span>
+                            </div>
                         </div>
-                        <div class="depoimento-info">
-                            <h4>Juliana</h4>
-                            <span>Introdução alimentar</span>
-                        </div>
+                        <p>"Profissional incrível! O cuidado e o carinho com o meu bebê foram fundamentais para
+                            superarmos as dificuldades iniciais. O ambiente do consultório traz muita paz. Indico de
+                            olhos fechados!"</p>
+                        <div class="depoimento-stars">⭐⭐⭐⭐⭐</div>
                     </div>
-                    <p>"A orientação foi objetiva, acolhedora e muito segura. A Priscilla tem um olhar humano que faz
-                        toda diferença para a família."</p>
-                    <div class="depoimento-stars">⭐⭐⭐⭐⭐</div>
+
+                    <!-- Duplicate for infinite loop -->
+                    <!-- Depoimento 1 -->
+                    <div class="depoimento-card">
+                        <div class="depoimento-header">
+                            <div class="avatar">
+                                <img src="./assets/andreza.png" alt="Andreza da Rocha"
+                                    onerror="this.src='https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80'">
+                            </div>
+                            <div class="depoimento-info">
+                                <h4>Andreza da Rocha</h4>
+                                <span>Atendimento em Amamentação</span>
+                            </div>
+                        </div>
+                        <p>"A Dra. Priscilla é uma excelente profissional, além de muito atenciosa e paciente com o
+                            bebê. Nos auxiliou a liberar as tensões para que o meu filho pudesse mamar de forma mais
+                            efetiva. Recomendo muito!"</p>
+                        <div class="depoimento-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+
+                    <!-- Depoimento 2 -->
+                    <div class="depoimento-card">
+                        <div class="depoimento-header">
+                            <div class="avatar">
+                                <img src="./assets/renata-poliseni.png" alt="Renata Poliseni"
+                                    onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80'">
+                            </div>
+                            <div class="depoimento-info">
+                                <h4>Renata Poliseni</h4>
+                                <span>Avaliação e Acompanhamento</span>
+                            </div>
+                        </div>
+                        <p>"Prédio acessível com elevador, de esquina. Próximo a uma praça em uma rua tranquila.
+                            Surpreendeu a decoração temática e muito delicada. A Fonoaudiologa especializada possui
+                            muita experiência com mamães e bebês na fase crítica da amamentação. Em momentos de
+                            dificuldades vale buscar profissionais especializados para a solução."</p>
+                        <div class="depoimento-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
+
+                    <!-- Depoimento 3 -->
+                    <div class="depoimento-card">
+                        <div class="depoimento-header">
+                            <div class="avatar">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80"
+                                    alt="Izadora">
+                            </div>
+                            <div class="depoimento-info">
+                                <h4>Izadora</h4>
+                                <span>Atendimento Humanizado</span>
+                            </div>
+                        </div>
+                        <p>"Profissional incrível! O cuidado e o carinho com o meu bebê foram fundamentais para
+                            superarmos as dificuldades iniciais. O ambiente do consultório traz muita paz. Indico de
+                            olhos fechados!"</p>
+                        <div class="depoimento-stars">⭐⭐⭐⭐⭐</div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- ========== FAQ ========== -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <div class="section-header">
-                <h2>Perguntas Frequentes</h2>
-                <p>Tire suas principais dúvidas</p>
-            </div>
-
-            <div class="faq-list">
-                <div class="faq-item in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <button class="faq-question">Para quais casos o atendimento é indicado?<span
-                            class="faq-icon">+</span></button>
-                    <div class="faq-answer">
-                        <p>O atendimento é indicado para amamentação, disfunções orais, teste da linguinha, disfagia e
-                            introdução alimentar em bebês até 1 ano.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <button class="faq-question">O atendimento é voltado apenas para bebês?<span
-                            class="faq-icon">+</span></button>
-                    <div class="faq-answer">
-                        <p>O foco principal é o cuidado com bebês e o suporte às famílias nos primeiros desafios
-                            relacionados à alimentação e ao desenvolvimento oral.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <button class="faq-question">Como agendar um atendimento?<span class="faq-icon">+</span></button>
-                    <div class="faq-answer">
-                        <p>Você pode entrar em contato diretamente pelo WhatsApp para tirar dúvidas e solicitar seu
-                            agendamento.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <button class="faq-question">A família recebe orientação durante o processo?<span
-                            class="faq-icon">+</span></button>
-                    <div class="faq-answer">
-                        <p>Sim. O atendimento busca acolher e orientar a família para que todos se sintam mais seguros
-                            durante cada etapa do cuidado com o bebê.</p>
-                    </div>
-                </div>
+            <div class="cta-google reveal-item" style="text-align: center; margin-top: 30px;">
+                <a href="https://g.co/kgs/StMa9xv" target="_blank"
+                    class="btn btn-secondary" style="border-color: var(--primary); color: var(--primary);">Ver mais
+                    avaliações no Google</a>
             </div>
         </div>
     </section>
@@ -520,44 +476,45 @@
     <!-- ========== CONTATO / CTA FINAL ========== -->
     <section class="contato" id="contato">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal-item">
                 <h2>Vamos cuidar desse momento com mais leveza e segurança?</h2>
-                <p>Fale com Priscilla Miranda e receba um atendimento acolhedor para você e seu bebê</p>
+                <p>Fale com Priscilla Miranda e agende seu atendimento.</p>
             </div>
 
-            <div class="contato-content contato-cta">
-                <div class="contato-info contato-info-centralizado in-view"
-                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <div class="info-item">
-                        <div class="info-icon">📍</div>
-                        <div>
-                            <h4>Atendimento em Porto Alegre</h4>
-                            <p>Av. Lavras 141/201, Porto Alegre - RS</p>
-                        </div>
-                    </div>
+            <div class="map-container reveal-item" style="position: relative;">
+                <a href="https://g.co/kgs/StMa9xv" target="_blank" rel="noopener noreferrer" style="position: absolute; inset: 0; z-index: 10;" aria-label="Abrir localização no Google Maps"></a>
+                <!-- Embedded Google Map -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.766347895475!2d-51.1873133!3d-30.0435136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95197825b42d7655%3A0x8e8785194edc0b39!2sAv.%20Lavras%2C%20141%20-%20Petr%C3%B3polis%2C%20Porto%20Alegre%20-%20RS%2C%2090460-040!5e0!3m2!1spt-BR!2sbr!4v1715535300000!5m2!1spt-BR!2sbr"
+                    width="100%" height="400" style="border:0; border-radius: 18px; box-shadow: var(--shadow);"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+            <div style="text-align: center; margin-top: 15px;" class="reveal-item">
+                <a href="https://g.co/kgs/StMa9xv" target="_blank" class="btn" style="font-weight: 600; background: #6fc2ab; color: #ffffff; border: 1px solid #58b39a;">📍 Abrir rota no Google Maps</a>
+            </div>
 
-                    <div class="info-item">
-                        <div class="info-icon">📲</div>
-                        <div>
-                            <h4>WhatsApp</h4>
-                            <p>(51) 8474-5509</p>
-                        </div>
-                    </div>
-
-                    <div class="contato-botoes">
-                        <a href="https://wa.me/555184745509" target="_blank" rel="noopener noreferrer"
-                            class="btn btn-primary">Agendar pelo WhatsApp</a>
-                        <a href="https://www.instagram.com/fonoprimiranda/" target="_blank" rel="noopener noreferrer"
-                            class="btn btn-secondary">Ver Instagram</a>
-                    </div>
-                </div>
+            <div class="contato-cta reveal-item delay-1" style="text-align: center; margin-top: 40px;">
+                <a href="https://wa.me/555184745509" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-primary btn-lg pulse-btn"
+                    style="display: inline-flex; align-items: center; gap: 8px;">
+                    <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+                        <path
+                            d="M19.11 17.39C18.83 17.25 17.46 16.58 17.21 16.48C16.96 16.39 16.77 16.34 16.58 16.62C16.39 16.9 15.86 17.53 15.7 17.71C15.55 17.9 15.39 17.92 15.11 17.78C13.47 16.96 12.4 16.32 11.42 14.64C11.16 14.19 11.68 14.22 12.16 13.26C12.25 13.08 12.21 12.92 12.14 12.78C12.07 12.64 11.51 11.27 11.27 10.71C11.03 10.17 10.79 10.24 10.61 10.23C10.44 10.22 10.25 10.22 10.06 10.22C9.87 10.22 9.56 10.29 9.3 10.57C9.05 10.85 8.33 11.52 8.33 12.89C8.33 14.26 9.33 15.58 9.47 15.77C9.61 15.96 11.43 18.76 14.22 19.96C15.98 20.72 16.67 20.79 17.2 20.71C17.81 20.62 19.08 20.06 19.35 19.29C19.62 18.53 19.62 17.88 19.54 17.74C19.47 17.6 19.39 17.53 19.11 17.39Z"
+                            fill="currentColor"></path>
+                        <path
+                            d="M16 3C8.82 3 3 8.82 3 16C3 18.53 3.72 20.98 5.08 23.11L3.5 28.5L9.05 27.04C11.09 28.23 13.41 29 16 29C23.18 29 29 23.18 29 16C29 8.82 23.18 3 16 3ZM16 26.67C13.82 26.67 11.79 26.03 10.08 24.94L9.68 24.68L6.39 25.54L7.28 22.34L7.02 21.92C5.88 20.12 5.33 18.19 5.33 16C5.33 10.11 10.11 5.33 16 5.33C21.89 5.33 26.67 10.11 26.67 16C26.67 21.89 21.89 26.67 16 26.67Z"
+                            fill="currentColor"></path>
+                    </svg> Agendar pelo WhatsApp
+                </a>
             </div>
         </div>
     </section>
 
     <!-- ========== BOTÕES FIXOS ========== -->
     <div class="floating-actions" aria-label="Ações rápidas">
-        <button type="button" class="floating-btn floating-btn-ai" id="openAiAutomation"
+        <!-- AI Button with heartbeat animation -->
+        <button type="button" class="floating-btn floating-btn-ai palpitando" id="openAiAutomation"
             aria-label="Abrir assistente virtual" data-webhook-url="https://SEU-WEBHOOK-N8N-AQUI">
             <span class="floating-btn-icon" aria-hidden="true">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -575,7 +532,7 @@
             <span class="floating-btn-text">IA</span>
         </button>
 
-        <a href="https://wa.me/555184745509" class="floating-btn floating-btn-whatsapp" target="_blank"
+        <a href="https://wa.me/555184745509" class="floating-btn floating-btn-whatsapp pulse-btn-soft" target="_blank"
             rel="noopener noreferrer" aria-label="Falar no WhatsApp">
             <span class="floating-btn-icon" aria-hidden="true">
                 <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
@@ -603,12 +560,6 @@
                             <path
                                 d="M12 3C8.134 3 5 6.134 5 10V11C3.895 11 3 11.895 3 13V16C3 17.105 3.895 18 5 18H6V10C6 6.686 8.686 4 12 4C15.314 4 18 6.686 18 10V18H19C20.105 18 21 17.105 21 16V13C21 11.895 20.105 11 19 11V10C19 6.134 15.866 3 12 3Z"
                                 fill="currentColor"></path>
-                            <path
-                                d="M9 12.5C9 11.672 9.672 11 10.5 11H13.5C14.328 11 15 11.672 15 12.5C15 13.328 14.328 14 13.5 14H10.5C9.672 14 9 13.328 9 12.5Z"
-                                fill="currentColor"></path>
-                            <path
-                                d="M9.5 17C9.224 17 9 17.224 9 17.5C9 18.881 10.619 20 12.5 20C14.381 20 16 18.881 16 17.5C16 17.224 15.776 17 15.5 17H9.5Z"
-                                fill="currentColor"></path>
                         </svg>
                     </div>
                     <div>
@@ -616,10 +567,7 @@
                         <p>Respostas rápidas sobre atendimento, serviços e contato</p>
                     </div>
                 </div>
-
-                <button type="button" class="ai-chat-close" id="closeAiChat" aria-label="Fechar conversa">
-                    ✕
-                </button>
+                <button type="button" class="ai-chat-close" id="closeAiChat" aria-label="Fechar conversa">✕</button>
             </div>
 
             <div class="ai-chat-body">
@@ -627,39 +575,22 @@
                     <div class="ai-message ai-message-bot">
                         <div class="ai-message-bubble">
                             Olá! Eu sou a assistente virtual da Priscilla Miranda. Posso te ajudar com dúvidas sobre
-                            atendimento, amamentação, avaliação e contato.
-                        </div>
-                    </div>
-
-                    <div class="ai-message ai-message-bot">
-                        <div class="ai-message-bubble">
-                            Você pode escolher uma pergunta pronta abaixo ou digitar sua dúvida.
+                            atendimento e contato.
                         </div>
                     </div>
                 </div>
-
                 <div class="ai-chat-suggestions" id="aiChatSuggestions">
                     <button type="button" class="ai-suggestion-btn">Quais serviços são oferecidos?</button>
-                    <button type="button" class="ai-suggestion-btn">Como funciona o atendimento?</button>
-                    <button type="button" class="ai-suggestion-btn">A Priscilla atende amamentação?</button>
-                    <button type="button" class="ai-suggestion-btn">O que é teste da linguinha?</button>
                     <button type="button" class="ai-suggestion-btn">Como agendar?</button>
                     <button type="button" class="ai-suggestion-btn">Quero falar no WhatsApp</button>
                 </div>
             </div>
 
             <div class="ai-chat-footer">
-                <a href="https://wa.me/555184745509" target="_blank" rel="noopener noreferrer"
-                    class="ai-chat-whatsapp-link">
-                    Falar no WhatsApp
-                </a>
-
                 <form class="ai-chat-form" id="aiChatForm">
                     <input type="text" id="aiChatInput" class="ai-chat-input" placeholder="Digite sua dúvida..."
                         autocomplete="off">
-                    <button type="submit" class="ai-chat-send" id="aiChatSend">
-                        Enviar
-                    </button>
+                    <button type="submit" class="ai-chat-send" id="aiChatSend">Enviar</button>
                 </form>
             </div>
         </div>
@@ -670,19 +601,12 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">Priscilla Miranda</div>
+                <p>CRFa 9954</p>
                 <p>Fonoaudiologia materno-infantil com acolhimento, técnica e cuidado para bebês e famílias.</p>
-
-                <div class="footer-links">
-                    <a href="#inicio">Início</a>
-                    <a href="#sobre">Sobre</a>
-                    <a href="#servicos">Serviços</a>
-                    <a href="#consultoria">Atendimento</a>
-                    <a href="#contato">Contato</a>
-                </div>
 
                 <div class="footer-social">
                     <a href="https://www.instagram.com/fonoprimiranda/" target="_blank" rel="noopener noreferrer"
-                        aria-label="Instagram" class="footer-social-link">
+                        class="footer-social-link" aria-label="Instagram">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
                             <path
                                 d="M7 2H17C19.761 2 22 4.239 22 7V17C22 19.761 19.761 22 17 22H7C4.239 22 2 19.761 2 17V7C2 4.239 4.239 2 7 2Z"
@@ -694,35 +618,14 @@
                             </path>
                         </svg>
                     </a>
-
-                    <a href="https://wa.me/555184745509" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
-                        class="footer-social-link">
-                        <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
-                            <path
-                                d="M19.11 17.39C18.83 17.25 17.46 16.58 17.21 16.48C16.96 16.39 16.77 16.34 16.58 16.62C16.39 16.9 15.86 17.53 15.7 17.71C15.55 17.9 15.39 17.92 15.11 17.78C13.47 16.96 12.4 16.32 11.42 14.64C11.16 14.19 11.68 14.22 12.16 13.26C12.25 13.08 12.21 12.92 12.14 12.78C12.07 12.64 11.51 11.27 11.27 10.71C11.03 10.17 10.79 10.24 10.61 10.23C10.44 10.22 10.25 10.22 10.06 10.22C9.87 10.22 9.56 10.29 9.3 10.57C9.05 10.85 8.33 11.52 8.33 12.89C8.33 14.26 9.33 15.58 9.47 15.77C9.61 15.96 11.43 18.76 14.22 19.96C15.98 20.72 16.67 20.79 17.2 20.71C17.81 20.62 19.08 20.06 19.35 19.29C19.62 18.53 19.62 17.88 19.54 17.74C19.47 17.6 19.39 17.53 19.11 17.39Z"
-                                fill="currentColor"></path>
-                            <path
-                                d="M16 3C8.82 3 3 8.82 3 16C3 18.53 3.72 20.98 5.08 23.11L3.5 28.5L9.05 27.04C11.09 28.23 13.41 29 16 29C23.18 29 29 23.18 29 16C29 8.82 23.18 3 16 3ZM16 26.67C13.82 26.67 11.79 26.03 10.08 24.94L9.68 24.68L6.39 25.54L7.28 22.34L7.02 21.92C5.88 20.12 5.33 18.19 5.33 16C5.33 10.11 10.11 5.33 16 5.33C21.89 5.33 26.67 10.11 26.67 16C26.67 21.89 21.89 26.67 16 26.67Z"
-                                fill="currentColor"></path>
-                        </svg>
-                    </a>
                 </div>
             </div>
-
             <div class="footer-bottom">
-                <p>© 2026 Priscilla Miranda. Todos os direitos reservados.</p>
-                <p><a href="#privacidade">Política de Privacidade</a></p>
+                <p>© 2026 Priscilla Miranda. Todos os direitos reservados em parceria com<a
+                        href="https://a-plataforma-prime-team.vercel.app/"> Prime Team</a></p>
             </div>
         </div>
     </footer>
-
-    <section class="privacidade" id="privacidade">
-        <div class="container">
-            <h3>Política de Privacidade</h3>
-            <p>Os dados enviados neste site são utilizados apenas para contato, atendimento e agendamento, respeitando a
-                privacidade e a segurança das informações dos usuários.</p>
-        </div>
-    </section>
 
     <script src="script.js"></script>
 
