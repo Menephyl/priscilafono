@@ -103,18 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }, 100);
 
-    // Hero Background Slider (1.4s)
-    const heroImages = document.querySelectorAll('#heroBgSlider .hero-bg-image');
-    if (heroImages.length > 1) {
-        let currentHeroIndex = 0;
-        setInterval(() => {
-            heroImages[currentHeroIndex].classList.remove('active');
-            currentHeroIndex = (currentHeroIndex + 1) % heroImages.length;
-            heroImages[currentHeroIndex].classList.add('active');
-        }, 1400);
-    }
-
-    // Sobre Image Slider (3s)
+    // Sobre Image Slider (5s delay as requested)
     const sobreImages = document.querySelectorAll('#sobreImgSlider .sobre-img');
     if (sobreImages.length > 1) {
         let currentSobreIndex = 0;
@@ -122,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
             sobreImages[currentSobreIndex].classList.remove('active');
             currentSobreIndex = (currentSobreIndex + 1) % sobreImages.length;
             sobreImages[currentSobreIndex].classList.add('active');
-        }, 3000);
+        }, 5000);
     }
 
     // =========================

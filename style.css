@@ -3,8 +3,8 @@
     --primary-dark: #67448e;
     --secondary: #bfe8dc;
     --accent: #e6dcf5;
-    --bg: #faf7fc;
-    --bg-alt: #f3eef8;
+    --bg: rgba(250, 247, 252, 0.90);
+    --bg-alt: rgba(243, 238, 248, 0.92);
     --card: #ffffff;
     --text: #3f3450;
     --text-light: #6f6483;
@@ -29,7 +29,11 @@ html {
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: var(--bg);
+    background-image: url('./assets/fundo-vela.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     color: var(--text);
     line-height: 1.6;
 }
@@ -297,7 +301,7 @@ section {
     backdrop-filter: blur(8px);
     border-radius: var(--radius);
     padding: 20px 26px;
-    min-width: 180px;
+    width: 200px;
     text-align: center;
 }
 
@@ -389,12 +393,15 @@ section {
 }
 
 .servicos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
 }
 
 .servico-card {
+    flex: 1 1 300px;
+    max-width: 360px;
     background: var(--card);
     border-radius: var(--radius);
     overflow: hidden;
@@ -1402,10 +1409,15 @@ section {
     }
 
     .floating-btn {
-        height: 54px;
-        min-width: 54px;
-        padding: 0 14px;
-        font-size: 0.9rem;
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        padding: 0;
+        border-radius: 50%;
+    }
+
+    .floating-btn-text {
+        display: none;
     }
 
     .ai-chat-window {
@@ -1458,15 +1470,7 @@ section {
         height: 44px;
     }
 
-    .floating-btn {
-        height: 50px;
-        min-width: 50px;
-        border-radius: 999px;
-    }
 
-    .floating-btn-text {
-        font-size: 0.84rem;
-    }
 
     .ai-chat-header {
         padding: 14px;
@@ -1502,14 +1506,27 @@ section {
     transform: translateY(30px);
     transition: opacity 0.8s cubic-bezier(0.5, 0, 0, 1), transform 0.8s cubic-bezier(0.5, 0, 0, 1);
 }
+
 .reveal-item.active {
     opacity: 1;
     transform: translateY(0);
 }
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
-.delay-3 { transition-delay: 0.3s; }
-.delay-4 { transition-delay: 0.4s; }
+
+.delay-1 {
+    transition-delay: 0.1s;
+}
+
+.delay-2 {
+    transition-delay: 0.2s;
+}
+
+.delay-3 {
+    transition-delay: 0.3s;
+}
+
+.delay-4 {
+    transition-delay: 0.4s;
+}
 
 /* CRFa */
 .crfa-text {
@@ -1520,7 +1537,8 @@ section {
 }
 
 /* Hero Slider & Sobre Slider */
-.hero-bg-image, .sobre-img {
+.hero-bg-image,
+.sobre-img {
     position: absolute;
     top: 0;
     left: 0;
@@ -1530,9 +1548,12 @@ section {
     transition: opacity 1s ease-in-out;
     object-fit: cover;
 }
-.hero-bg-image.active, .sobre-img.active {
+
+.hero-bg-image.active,
+.sobre-img.active {
     opacity: 1;
 }
+
 .sobre-image-container {
     position: relative;
     border-radius: var(--radius);
@@ -1545,25 +1566,30 @@ section {
 .escritorio {
     background: var(--bg-alt);
 }
+
 .escritorio-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
 }
+
 .escritorio-img-wrapper {
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow);
 }
+
 .escritorio-img-wrapper img {
     width: 100%;
     height: 350px;
     object-fit: cover;
     transition: transform 0.4s ease;
 }
+
 .escritorio-img-wrapper:hover img {
     transform: scale(1.05);
 }
+
 .badge-domicilio {
     display: inline-block;
     background: var(--primary);
@@ -1575,24 +1601,35 @@ section {
 }
 
 /* Carousel Global (Atuação & Depoimentos) */
-.carousel-container, .depoimentos-slider {
+.carousel-container,
+.depoimentos-slider {
     overflow: hidden;
     position: relative;
     width: 100%;
     padding: 10px 0;
 }
-.carousel-track, .depoimentos-track {
+
+.carousel-track,
+.depoimentos-track {
     display: flex;
     gap: 20px;
     width: max-content;
     animation: scrollCarousel 25s linear infinite;
 }
-.carousel-track:hover, .depoimentos-track:hover {
+
+.carousel-track:hover,
+.depoimentos-track:hover {
     animation-play-state: paused;
 }
+
 @keyframes scrollCarousel {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-50% - 10px)); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-50% - 10px));
+    }
 }
 
 .carousel-slide {
@@ -1603,17 +1640,29 @@ section {
     box-shadow: var(--shadow);
     border: 1px solid rgba(125, 91, 166, 0.08);
 }
+
 .carousel-slide img {
     width: 100%;
     height: 220px;
     object-fit: cover;
 }
+
 .slide-content {
     padding: 20px;
     text-align: center;
 }
-.slide-content h3 { font-size: 1.1rem; margin-bottom: 10px; color: var(--text); }
-.slide-content p { font-size: 0.9rem; margin: 0; color: var(--text-light); }
+
+.slide-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.slide-content p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: var(--text-light);
+}
 
 .depoimento-card {
     width: 350px;
@@ -1629,8 +1678,9 @@ section {
 .instagram-section {
     background: var(--bg);
 }
+
 .insta-post {
-    max-width: 400px;
+    max-width: 850px;
     margin: 0 auto;
     background: var(--card);
     border-radius: var(--radius);
@@ -1638,14 +1688,17 @@ section {
     box-shadow: var(--shadow);
     border: 1px solid rgba(125, 91, 166, 0.08);
 }
+
 .insta-img-wrapper img {
     width: 100%;
     height: auto;
 }
+
 .insta-actions {
     padding: 15px;
     text-align: center;
 }
+
 .btn-like {
     display: inline-block;
     padding: 10px 20px;
@@ -1656,6 +1709,7 @@ section {
     border: 1px solid #ffc2d1;
     transition: all 0.3s ease;
 }
+
 .btn-like:hover {
     background: #e1306c;
     color: #fff;
@@ -1663,17 +1717,33 @@ section {
 }
 
 /* Pulsing */
-.palpitando, .pulse-btn {
+.palpitando,
+.pulse-btn {
     animation: pulseHeart 1.5s infinite;
 }
+
 @keyframes pulseHeart {
-    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(125, 91, 166, 0.7); }
-    50% { transform: scale(1.08); box-shadow: 0 0 0 15px rgba(125, 91, 166, 0); }
-    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(125, 91, 166, 0); }
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(125, 91, 166, 0.7);
+    }
+
+    50% {
+        transform: scale(1.08);
+        box-shadow: 0 0 0 15px rgba(125, 91, 166, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(125, 91, 166, 0);
+    }
 }
 
 @media (max-width: 768px) {
     .escritorio-grid {
         grid-template-columns: 1fr;
+    }
+    .insta-post {
+        max-width: 400px;
     }
 }
