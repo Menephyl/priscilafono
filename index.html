@@ -39,12 +39,11 @@
             <nav class="nav">
                 <a href="#inicio" class="logo" style="display: flex; flex-direction: column; align-items: flex-start; gap: 2px; text-decoration: none;">
                     <img src="./assets/Logo.png" alt="Priscilla Miranda" style="height: 4rem; width: auto;">
-                    <span style="font-size: 10px; color: var(--text-light); font-weight: 600; letter-spacing: 0.5px; margin-top: 2px;text-align:right; margin-left:
-                    4.4rem;">CRFa  7 - 9954</span>
+                    <span style="font-size: 10px; color:var(--primary-dark); font-weight: 600; letter-spacing: 0.5px; margin-top: 2px;text-align:right; margin-left:4.4rem;">CRFa  7 - 9954</span>
                 </a>
 
                 <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
-                    <span></span><span></span><span></span>
+                    
                 </button>
 
                 <ul class="nav-menu" id="navMenu">
@@ -208,7 +207,7 @@
                     <div class="servico-content">
                         <h3>Disfunções Orais</h3>
                         <p>Avaliação de alterações que podem impactar sucção, alimentação e conforto do bebê.</p>
-                        <a href="https://wa.me/555184745509" class="btn btn-primary btn-sm" target="_blank"
+                        <a href="https://wa.me/5551984745509" class="btn btn-primary btn-sm" target="_blank"
                             style="margin-top: 15px;">Agende Agora</a>
                     </div>
                 </div>
@@ -252,12 +251,37 @@
 
             </div>
 
-            <div class="escritorio-grid">
+            <div class="escritorio-carousel">
+               
+                <div class="escritorio-img-wrapper reveal-item delay-1">
+                    <img src="./assets/nossoEscritorio1 (1).jpeg" alt="Meu Consultório - Detalhes do Ambiente">
+                </div>
+                <div class="escritorio-img-wrapper reveal-item delay-2">
+                    <img src="./assets/nossoEscritorio1 (2).jpeg" alt="Meu Consultório - Detalhes do Ambiente">
+                </div>
+                <div class="escritorio-img-wrapper reveal-item delay-3">
+                    <img src="./assets/nossoEscritorio1 (3).jpeg" alt="Meu Consultório - Detalhes do Ambiente">
+                </div>
+                <div class="escritorio-img-wrapper reveal-item delay-4">
+                    <img src="./assets/nossoEscritorio1 (4).jpeg" alt="Meu Consultório - Detalhes do Ambiente">
+                </div>
                 <div class="escritorio-img-wrapper reveal-item">
-                    <img src="./assets/nossoEscritorio.jpeg" alt="Nosso Escritório - Sala de Atendimento">
+                    <img src="./assets/nossoEscritorio1 (5).jpeg" alt="Meu Consultório - Detalhes do Ambiente">
                 </div>
                 <div class="escritorio-img-wrapper reveal-item delay-1">
-                    <img src="./assets/nossoEscritorio2.jpeg" alt="Nosso Escritório - Detalhes do Ambiente">
+                    <img src="./assets/nossoEscritorio1 (6).jpeg" alt="Meu Consultório - Detalhes do Ambiente">
+                </div>
+                <div class="escritorio-img-wrapper reveal-item delay-2">
+                    <img src="./assets/nossoEscritorio1 (7).jpeg" alt="Meu Consultório - Detalhes do Ambiente">
+                </div>
+                <div class="escritorio-img-wrapper reveal-item delay-3">
+                    <img src="./assets/nossoEscritorio1 (8).jpeg" alt="Meu Consultório - Detalhes do Ambiente">
+                </div>
+                <div class="escritorio-img-wrapper reveal-item delay-4">
+                    <img src="./assets/nossoEscritorio1 (9).jpeg" alt="Meu Consultório - Detalhes do Ambiente">
+                </div>
+                <div class="escritorio-img-wrapper reveal-item">
+                    <img src="./assets/nossoEscritorio2.jpeg" alt="Meu Consultório - Detalhes do Ambiente">
                 </div>
             </div>
 
@@ -590,8 +614,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo" style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                    <img src="./assets/Logo.png" alt="Priscilla Miranda" style="height: 60px; width: auto;background-color:white; padding: 8px; border-radius: 10%;">
-                    <span style="font-size: 14px; color: rgba(255, 255, 255, 0.8); font-weight: 600; letter-spacing: 1px; margin-bottom: 10px; ">CRFa 7- 9954</span>
+                    <img src="./assets/Logo.png" alt="Priscilla Miranda" style="height: 60px; width: auto;padding: 8px; border-radius: 10%;">
+                    <span style="font-size: 14px;color:var(--primary-dark); font-weight: 600; letter-spacing: 1px; margin-bottom: 10px; ">CRFa 7- 9954</span>
                 </div>
                 <p>Fonoaudiologia materno-infantil com acolhimento, técnica e cuidado para bebês e famílias.</p>
 
@@ -619,6 +643,15 @@
             </div>
         </div>
     </footer>
+
+    <!-- ========== LIGHTBOX MODAL ========== -->
+    <div class="lightbox-modal" id="lightboxModal" aria-hidden="true">
+        <div class="lightbox-overlay" id="lightboxOverlay"></div>
+        <div class="lightbox-content">
+            <span class="lightbox-close" id="closeLightbox">&times;</span>
+            <img class="lightbox-img" id="lightboxImg" src="" alt="Foto Ampliada">
+        </div>
+    </div>
 
     <script src="script.js"></script>
 

@@ -436,4 +436,100 @@ document.addEventListener('DOMContentLoaded', function () {
             await handleUserMessage(question);
         });
     });
+
+    // ==========================================
+    // CARROSSEL AUTOMÁTICO DO ESCRITÓRIO
+    // ==========================================
+    const officeCarousel = document.querySelector('.escritorio-carousel');
+    if (officeCarousel) {
+        let autoScrollInterval;
+        let isUserInteracting = false;
+        let interactionTimeout;
+
+        const startAutoScroll = () => {
+            autoScrollInterval = setInterval(() => {
+                if (isUserInteracting) return;
+
+                const maxScrollLeft = officeCarousel.scrollWidth - officeCarousel.clientWidth;
+                const slide = officeCarousel.querySelector('.escritorio-img-wrapper');
+                if (!slide) return;
+
+                const slideWidth = slide.offsetWidth + 20; // largura do slide + gap de 20px
+
+                if (officeCarousel.scrollLeft >= maxScrollLeft - 5) {
+                    // Retorna ao início de forma suave
+                    officeCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+                } else {
+                    // Avança para o próximo slide
+                    officeCarousel.scrollBy({ left: slideWidth, behavior: 'smooth' });
+                }
+            }, 3500); // Roda a cada 3.5 segundos
+        };
+
+        const stopAutoScroll = () => {
+            clearInterval(autoScrollInterval);
+        };
+
+        const handleInteraction = () => {
+            isUserInteracting = true;
+            clearTimeout(interactionTimeout);
+            // Retoma o scroll automático após 4 segundos de inatividade
+            interactionTimeout = setTimeout(() => {
+                isUserInteracting = false;
+            }, 4000);
+        };
+
+        startAutoScroll();
+
+        // Pausa no hover (desktop)
+        officeCarousel.addEventListener('mouseenter', () => {
+            isUserInteracting = true;
+        });
+        officeCarousel.addEventListener('mouseleave', () => {
+            isUserInteracting = false;
+        });
+
+        // Pausa no toque (mobile/tablet)
+        officeCarousel.addEventListener('touchstart', handleInteraction, { passive: true });
+        officeCarousel.addEventListener('touchmove', handleInteraction, { passive: true });
+        officeCarousel.addEventListener('scroll', handleInteraction, { passive: true });
+    }
+
+    // ==========================================
+    // ZOOM DA FOTO (LIGHTBOX MODAL)
+    // ==========================================
+    const lightboxModal = document.getElementById('lightboxModal');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const closeLightbox = document.getElementById('closeLightbox');
+    const lightboxOverlay = document.getElementById('lightboxOverlay');
+    const officeImages = document.querySelectorAll('.escritorio-carousel img');
+
+    if (lightboxModal && lightboxImg) {
+        officeImages.forEach(img => {
+            img.style.cursor = 'zoom-in'; // cursor de zoom para indicar clique
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightboxModal.classList.add('active');
+                lightboxModal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden'; // Remove o scroll vertical do site
+            });
+        });
+
+        const closeImgModal = () => {
+            lightboxModal.classList.remove('active');
+            lightboxModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = ''; // Restaura o scroll vertical do site
+        };
+
+        closeLightbox?.addEventListener('click', closeImgModal);
+        lightboxOverlay?.addEventListener('click', closeImgModal);
+
+        // Fecha ao pressionar ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightboxModal.classList.contains('active')) {
+                closeImgModal();
+            }
+        });
+    }
 });
